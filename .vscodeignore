@@ -1,0 +1,53 @@
+# Files to exclude from the VSIX package
+
+# Development files
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.git-ignore
+.gitattributes
+tsconfig.json
+tslint.json
+.eslintrc.json
+
+# Build artifacts
+**/*.map
+**/*.ts
+!dist/**/*.d.ts
+
+# Documentation (keep only essential ones)
+.github/**
+*.md
+!README.md
+!CHANGELOG.md
+!LICENSE
+
+# Test files
+**/test/**
+**/.vscode-test/**
+**/*.test.ts
+
+# Node modules (should use bundler instead, but exclude dev deps)
+node_modules/**
+!node_modules/*/dist/**
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+azure-pipelines.yml
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Editor files
+.editorconfig
+.prettierrc
+.eslintignore
+
+# Misc
+*.vsix
+.DS_Store
+Thumbs.db
